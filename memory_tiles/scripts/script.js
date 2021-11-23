@@ -7,27 +7,36 @@ document.addEventListener('DOMContentLoaded', setup)
 
 let tileSequence // key = sequencenumber (a number) value = the html id (format: tile-n, n = 1 to 9)
 let clickingEnabled = false;   //true means enable player to click the tiles.
-let gameOver = false;
-let roundClicks = 0;
-let button;
+let gameOver;
+let roundClicks;
+let playButton;
 
 function setup() {
     document.querySelector('img').style.visibility = 'hidden'
     tileSequence = new Map()
-    button = document.querySelector('button');
+    playButton = document.querySelector('button');
     
     let allTiles = document.querySelectorAll('td')
     allTiles.forEach(element => {
+        element.style.backgroundColor = 'rgb(66, 48, 32)'
         element.addEventListener('click', evt => {
             if (clickingEnabled) {
                 clickTile(evt)
             }
         })
     });
-
-    button.addEventListener('click', () => {
+    playButton.addEventListener('click', () => {
+        document.querySelector('img').style.visibility = 'hidden'
+        document.querySelector('#message').style.color = `rgb(255,255,255)`
+        document.querySelector('#message').textContent = `Welcome to Kyle's memory tile game! The sequence will get harder and you must click the tiles in the right order to advance to the next round.`
+        gameOver = false;
+        roundClicks = 0;
         playRound()
-        button.style.visibility = 'hidden'
+        allTiles.forEach(element => {
+            element.style.backgroundColor = 'rgb(66, 48, 32)'
+        });
+
+        playButton.style.visibility = 'hidden'
     })
 }
 
@@ -38,7 +47,6 @@ function clickTile(evt) {
     roundClicks++; //increment round clicks by 1
     const tile = evt.target
 
-    console.log(evt.target.getAttribute('id') === tileSequence.get(roundClicks))
     
     //set the tile to green if player clicked the correct 1.
     //else set it to red, and keep it red. gameOver will be true and player cannot click anymore tiles.
@@ -47,7 +55,7 @@ function clickTile(evt) {
         playClickSfx()
         setTimeout(() => {
             tile.style.backgroundColor = 'rgb(66, 48, 32)'
-        }, 250);
+        }, 100);
     } else {
         playSmackSfx()
         playPhoenixSfx()
@@ -58,6 +66,10 @@ function clickTile(evt) {
         document.querySelector('#message').style.color = `rgb(255,0,0)`
         clickingEnabled = false;
         document.querySelector('img').style.visibility = 'visible'
+        playButton.style.visibility = 'visible'
+        playButton.textContent = "Try again."
+
+        
     }
 
     //as soon as the player's click count reaches the size of the map (that holds)
@@ -134,17 +146,19 @@ function playBeepSfx() {
 
 function playClickSfx() {
     const beepSfx = new Audio('misc/click.mp3')
-    beepSfx.currentTime = 0.7
+    beepSfx.currentTime = 1
     beepSfx.play()
 }
 
 function playSmackSfx() {
     const beepSfx = new Audio('misc/smack.mp3')
     beepSfx.currentTime = 0.4
+    beepSfx.volume = 0.7
     beepSfx.play()
 }
 
 function playPhoenixSfx() {
     const beepSfx = new Audio('misc/jokesover.mp3')
+    beepSfx.volume = 0.7
     beepSfx.play()
 }
