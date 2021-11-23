@@ -5,37 +5,68 @@ document.addEventListener('DOMContentLoaded', setup)
 
 
 
-let tileSequence; // key = sequencenumber (a number) value = the html id (format: tile-n, n = 1 to 9)
+let tileSequence // key = sequencenumber (a number) value = the html id (format: tile-n, n = 1 to 9)
+let clickingEnabled = false;   //true means enable player to click the tiles.
+let gameOver = false;
+let roundClicks = 0;
+let button;
 
 function setup() {
-
-
+    document.querySelector('img').style.visibility = 'hidden'
     tileSequence = new Map()
-    addToSequence()
-    addToSequence()
-    addToSequence()
-    addToSequence()
-    addToSequence()
-    lightSequence()
+    button = document.querySelector('button');
+    
     let allTiles = document.querySelectorAll('td')
     allTiles.forEach(element => {
-        element.addEventListener('click', evt => clickTile(evt))
+        element.addEventListener('click', evt => {
+            if (clickingEnabled) {
+                clickTile(evt)
+            }
+        })
     });
+
+    button.addEventListener('click', () => {
+        playRound()
+        button.style.visibility = 'hidden'
+    })
 }
 
 //light the tile up upon clicking
 function clickTile(evt) {
-    const tile = evt.target
-
-    console.log(evt.target)
-    tile.style.backgroundColor = 'rgb(0,170,170)'
 
     
-    console.log(tileSequence)
+    roundClicks++; //increment round clicks by 1
+    const tile = evt.target
+
+    console.log(evt.target.getAttribute('id') === tileSequence.get(roundClicks))
+    
+    //set the tile to green if player clicked the correct 1.
+    //else set it to red, and keep it red. gameOver will be true and player cannot click anymore tiles.
+    if (evt.target.getAttribute('id') === tileSequence.get(roundClicks)) {
+        tile.style.backgroundColor = 'rgb(0,255,0)'
+        playClickSfx()
+        setTimeout(() => {
+            tile.style.backgroundColor = 'rgb(66, 48, 32)'
+        }, 250);
+    } else {
+        playSmackSfx()
+        playPhoenixSfx()
+        tile.style.backgroundColor = 'rgb(255,0,0)'
+        gameOver = true;  //GAME OVER!!!
+        tileSequence.clear() //empty the sequence.
+        document.querySelector('#message').textContent = `ded...`
+        document.querySelector('#message').style.color = `rgb(255,0,0)`
+        clickingEnabled = false;
+        document.querySelector('img').style.visibility = 'visible'
+    }
+
+    //as soon as the player's click count reaches the size of the map (that holds)
+    //the sequence, play another round!
+    if (tileSequence.size === roundClicks && !(gameOver)) {
+        playRound()
+    }
     //set the colour back to the original colour.
-    setTimeout(() => {
-        tile.style.backgroundColor = 'rgb(66, 48, 32)'
-    }, 250);
+    
 }
 
 /**generates a random number from 1 to 9 (integer)
@@ -55,11 +86,16 @@ function addToSequence() {
 }
 
 function lightSequence() {
-
-    console.log('function light called');
+    clickingEnabled = false; //do not enable player to click the tiles
+    document.querySelector('table').style.borderColor = `rgb(255,178,0)`
+    setTimeout( () => {
+        clickingEnabled = true;
+        roundClicks = 0;         //reset the number of clicks to 0
+        document.querySelector('table').style.borderColor = `rgb(255,255,255)`
+        document.querySelector('#message').textContent = `Click away!`
+    }, (tileSequence.size+1.5) * 1000)
     tileSequence.forEach((value, key) => {
         const tile = document.querySelector(`#${value}`) //get tile using id value of the map
-        console.log(tile)
         setTimeout(() => {
             lightTile(tile)
         }, 1000 * key);
@@ -72,16 +108,43 @@ function lightTile(tile) {
     tile.style.backgroundColor = 'rgb(0,170,170)'
 
     
-    console.log(tileSequence)
+
     //set the colour back to the original colour.
     setTimeout(() => {
         tile.style.backgroundColor = 'rgb(66, 48, 32)'
+        playBeepSfx()
     }, 250);
 }
 
 
 //each round, add a new tile to the sequence.
 function playRound() {
+
     addToSequence()
+    //updates the round number
+    document.querySelector('#round-heading').textContent = `Round ${tileSequence.size}`
     lightSequence() //light up the buttons
+}
+
+
+function playBeepSfx() {
+    const beepSfx = new Audio('misc/audio_compBlip.mp3')
+    beepSfx.play()
+}
+
+function playClickSfx() {
+    const beepSfx = new Audio('misc/click.mp3')
+    beepSfx.currentTime = 0.7
+    beepSfx.play()
+}
+
+function playSmackSfx() {
+    const beepSfx = new Audio('misc/smack.mp3')
+    beepSfx.currentTime = 0.4
+    beepSfx.play()
+}
+
+function playPhoenixSfx() {
+    const beepSfx = new Audio('misc/jokesover.mp3')
+    beepSfx.play()
 }
