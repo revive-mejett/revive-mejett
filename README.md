@@ -1,6 +1,6 @@
 # Memory tiles game
 
-##Instructions
+## Instructions
 
 1. Tiles will light up in a sequence.<br>
 2. After the sequence is shown, you must remember them and click them in order.
