@@ -1,7 +1,55 @@
-# Welcome to my Github!
+# console.log("Hello there!")
+I'm a Junior Software developer situated in Montreal, QC, Canada 🍁!
 
-## About me
-I'm a recently graduated Computer Science student, Junior developer and youtuber. Currently learning C# and React. I am currently studying and expecting to graduate soon. Thanks for visiting my solar system!
+## About me 🌕
+I'm a passionate software developer with expertise in front-end technologies like HTML/CSS, JavaScript and React. I also have experience in backend technologies such as Java and MongoDB. I am always eager to venture out into the vast ocean of software development and learn newer techologies. I'm looking for brand new and exciting challenging opportunities.
+
+- 💫 Pronouns: He/Him 🧍
+- 💫 I am currently learning TypeScript 💧
+- 💫 I am currently growing my MongoDB 🌱 skills
+- 💫 I have made several projects, mainly using MERN stack
+- 💫 I am in the process of brewing something cool 🔥, called `Open Journal Bonfire`!
+- 💫 I am looking for help ✋🛟 on: Docker and AWS
+- 💫 Fun facts about me:
+
+  <table>
+    <tr>
+      <th></th>
+      <th>Fact</th>
+    </tr>
+    <tr>
+      <td>Content creation</td>
+      <td>I make YouTube 🎥 videos</td>
+    </tr>
+    <tr>
+      <td>Favourite music</td>
+      <td>I like listening to Synthwave 🌇🎶 Music, and Black Eyed Peas</td>
+    </tr>
+    <tr>
+      <td>Favourite series genre</td>
+      <td>Mild horror 🧛, unsolved mysteries 🕵️ and paranormal activity 👻 shows</td>
+    </tr>
+    <tr>
+      <td>Other interests</td>
+      <td>Space and Liminal Spaces🚪🥛 (backrooms)</td>
+    </tr>
+    <tr>
+      <td>A unique mind</td>
+      <td>On the ASD 🌈 spectrum!</td>
+    </tr>
+  </table>
+
+
+## Current project(s)
+I have worked on / currently working on these projects:
+
+### Open Journal Bonfire (MERN STACK)
+https://github.com/revive-mejett/open-journal-bonfire
+
+
+## Where you can find me:
+- On <a href="https://www.youtube.com/c/kylebarvel">▶️ YouTube</a>
+- On <a href="https://www.linkedin.com/in/kyle-veloso-b78647195">🔗 LinkedIn</a>
 
 
 ## Legacy avatar:
