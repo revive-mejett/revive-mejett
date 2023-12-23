@@ -12,7 +12,7 @@ I'm a passionate software developer with expertise in front-end technologies lik
 - 💫 I am looking for help ✋🛟 on: Docker and AWS
 - 💫 Fun facts about me:
 
-  <table>
+  <table style="border: 1px solid red">
     <tr>
       <th></th>
       <th>Fact</th>
