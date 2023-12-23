@@ -1,4 +1,4 @@
-# console.log("Hello there!")
+# console.log("Hello there! 👋 ")
 I'm a Junior Software developer situated in Montreal, QC, Canada 🍁!
 
 ## About me 🌕
@@ -44,17 +44,17 @@ I'm a passionate software developer with expertise in front-end technologies lik
   </table>
 
 
-## Current project(s)
+## Current project(s) 🌕
 I have worked on / currently working on these projects:
 
 ### Open Journal Bonfire (MERN STACK)
 https://github.com/revive-mejett/open-journal-bonfire
 
 
-## Where you can find me:
+## Where you can find me 🌕
 - On <a href="https://www.youtube.com/c/kylebarvel">▶️ YouTube</a>
 - On <a href="https://www.linkedin.com/in/kyle-veloso-b78647195">🔗 LinkedIn</a>
 
 
-## Legacy avatar:
+## Legacy avatar 🌕
 ![90886544](https://github.com/revive-mejett/revive-mejett/assets/90886544/65dbb457-493e-4322-b5d1-f0231c3453f2)
