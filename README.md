@@ -26,6 +26,10 @@ I'm a passionate software developer with expertise in front-end technologies lik
       <td>I like listening to Synthwave 🌇🎶 Music, and Black Eyed Peas</td>
     </tr>
     <tr>
+      <td>Favourite drink</td>
+      <td>Tim Hortons lover ☕</td>
+    </tr>
+    <tr>
       <td>Favourite series genre</td>
       <td>Mild horror 🧛, unsolved mysteries 🕵️ and paranormal activity 👻 shows</td>
     </tr>
