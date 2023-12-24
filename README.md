@@ -4,7 +4,7 @@ I'm a Junior Software developer situated in Montreal, QC, Canada 🍁!
 
 ## About me 🌕
 <p align="justify">
-<img alt="Kyle Veloso portrait" src="https://kyle-veloso-website.onrender.com/static/media/kyle_portrait_outside.6ef704db524ffc5d69cb.jpg" width="150px" height="200px" align="left">I'm a passionate software developer with expertise in front-end technologies like HTML/CSS, JavaScript and React. I also have experience in backend technologies such as Java and MongoDB. I am always eager to venture out into the vast ocean of software development and learn newer techologies. I'm looking for brand new and exciting challenging opportunities.<br><br><br><br><br></p>
+<img alt="Kyle Veloso portrait" src="https://kyle-veloso-website.onrender.com/static/media/kyle_portrait_outside.6ef704db524ffc5d69cb.jpg" width="150px" height="200px" align="left">I'm a passionate software developer with expertise in front-end technologies like HTML/CSS, JavaScript and React. I also have experience in backend technologies such as Java and MongoDB. I am always eager to venture out into the vast ocean of software development and learn newer techologies. I'm looking for brand new and exciting challenging opportunities.<br><br><br><br><br><br></p>
 
 ---
 - 💫 Pronouns: He/Him 🧍
