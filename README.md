@@ -22,6 +22,10 @@ I'm a Junior Software developer situated in Montreal, QC, Canada 🍁!
       <th>Fact</th>
     </tr>
     <tr>
+      <td>Favourite PL?</td>
+      <td>JavaScript</td>
+    </tr>
+    <tr>
       <td>Content creation</td>
       <td>I make YouTube 🎥 videos</td>
     </tr>
