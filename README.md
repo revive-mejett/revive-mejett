@@ -62,9 +62,12 @@ https://github.com/revive-mejett/open-journal-bonfire
 https://github.com/revive-mejett/pillars-and-killers-td
 
 ## Code aside: my current grinds 🌕
-I have worked on / currently working on these projects:
+
 ### Silent Hill 2
+-Scary as hell
+
 ### Life is Strange: Double Exposure
+-Really mind-blowing
 
 
 ## Where you can find me 🌕
