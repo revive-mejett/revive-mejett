@@ -58,6 +58,14 @@ I have worked on / currently working on these projects:
 ### Open Journal Bonfire (MERN STACK)
 https://github.com/revive-mejett/open-journal-bonfire
 
+### Pillars and Killers Tower Defence (JavaScript + PIXI.Js)
+https://github.com/revive-mejett/pillars-and-killers-td
+
+## Code aside: my current grinds 🌕
+I have worked on / currently working on these projects:
+### Silent Hill 2
+### Life is Strange: Double Exposure
+
 
 ## Where you can find me 🌕
 - On <a href="https://www.youtube.com/c/kylebarvel">▶️ YouTube</a>
