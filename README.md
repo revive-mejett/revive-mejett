@@ -31,7 +31,7 @@ I'm a Junior Software developer situated in Montreal, QC, Canada 🍁!
     </tr>
     <tr>
       <td>Favourite music</td>
-      <td>I like listening to Synthwave 🌇🎶 Music, and Black Eyed Peas</td>
+      <td>I like listening to Synthwave 🌇🎶 Music, and EDM</td>
     </tr>
     <tr>
       <td>Favourite drink</td>
@@ -47,7 +47,7 @@ I'm a Junior Software developer situated in Montreal, QC, Canada 🍁!
     </tr>
     <tr>
       <td>A unique mind</td>
-      <td>On the ASD 🌈 spectrum!</td>
+      <td>On the ASD 🌈 spectrum</td>
     </tr>
   </table>
 
@@ -64,7 +64,7 @@ https://github.com/revive-mejett/pillars-and-killers-td
 ## Code aside: my current grinds 🌕
 
 ### Silent Hill 2
--Scary as hell
+-Scary as hell, lots of enemies 
 
 ### Life is Strange: Double Exposure
 -Really mind-blowing
